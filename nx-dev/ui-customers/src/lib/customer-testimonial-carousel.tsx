@@ -3,9 +3,11 @@ import { Dialog, Transition } from '@headlessui/react';
 import { PlayIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
+// TODO - move this to a data type file
 interface Testimonial {
   title: string;
   subtitle: string;
+  accentColor?: string;
   metrics?: {
     value: string;
     label: string;
@@ -33,6 +35,7 @@ const testimonials: Testimonial[] = [
     ],
     videoId: '2BLqiNnBPuU',
     thumbnail: '/images/customers/video-story-pavlo-grosse.avif',
+    accentColor: '#d50c2d',
   },
   {
     title: 'Customer story',
@@ -119,9 +122,9 @@ export function CustomerTestimonialCarousel(): JSX.Element {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
         {/* Left side - Quote or Metrics */}
-        <div className="col-span-3">
+        <div className="col-span-1 hidden md:block">
           {currentTestimonial.quote ? (
             <figure className="flex h-full flex-col justify-center">
               <blockquote className="relative">
@@ -177,7 +180,7 @@ export function CustomerTestimonialCarousel(): JSX.Element {
         </div>
 
         {/* Right side - Video Card */}
-        <div className="col-span-9">
+        <div className="col-span-2 md:col-span-3">
           <div
             className="group relative cursor-pointer overflow-hidden rounded-lg"
             onClick={() => setIsOpen(true)}
@@ -192,7 +195,13 @@ export function CustomerTestimonialCarousel(): JSX.Element {
             />
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div
+              className={`absolute inset-0 bg-gradient-to-t ${
+                currentTestimonial.accentColor
+                  ? `from-[${currentTestimonial.accentColor}]/60`
+                  : 'from-black/80'
+              } via-black/20 to-transparent`}
+            />
 
             {/* Content Overlay */}
             <div className="absolute bottom-0 left-0 p-8">
