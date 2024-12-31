@@ -21,17 +21,10 @@ export function ScaleYourOrganization(): ReactElement {
           <div className="flex items-start justify-end lg:order-first">
             <img
               alt="Nx Polygraph"
-              src="/images/enterprise/neurons-light.avif"
-              width={2111}
-              height={921}
-              className="w-[48rem] max-w-none sm:w-[57rem] md:-mr-4 lg:mr-0 dark:hidden"
-            />
-            <img
-              alt="Nx Polygraph"
-              src="/images/enterprise/neurons-dark.avif"
-              width={2111}
-              height={921}
-              className="hidden w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-slate-400/10 sm:w-[57rem] md:-mr-4 lg:mr-0 dark:block"
+              src="/images/enterprise/graphs.jpg"
+              width={3405}
+              height={1493}
+              className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-slate-400/10 sm:w-[57rem] md:-mr-4 lg:mr-0"
             />
           </div>
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">

@@ -1,20 +1,21 @@
 import {
-  AgentNumberOverTime,
-  AutomatedAgentsManagement,
-  EnhancedWithAi,
-  FasterAndCheaper,
   Hero,
-  Statistics,
   TrustedBy,
+  FasterAndCheaper,
   UnderstandWorkspace,
+  EnhancedWithAi,
+  AutomatedAgentsManagement,
+  AgentNumberOverTime,
+  Statistics,
 } from '@nx/nx-dev/ui-cloud';
+
 import {
   ButtonLinkProps,
   CallToAction,
   DefaultLayout,
 } from '@nx/nx-dev/ui-common';
+
 import type { Metadata } from 'next';
-import { ReactElement } from 'react';
 
 export const metadata: Metadata = {
   title: 'Nx Cloud',
@@ -39,10 +40,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NxCloudPage(): ReactElement {
+export default function NxCloudPage(): JSX.Element {
   const headerCTAConfig: ButtonLinkProps[] = [
     {
-      href: 'https://cloud.nx.app/get-started?utm_source=nx-dev&utm_medium=nx-cloud-header&utm_campaign=get-started',
+      href: '/pricing',
       variant: 'primary',
       size: 'small',
       title: 'Get started for free',

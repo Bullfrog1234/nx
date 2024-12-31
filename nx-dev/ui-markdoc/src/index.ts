@@ -56,8 +56,6 @@ import { pill } from './lib/tags/pill.schema';
 import { fence } from './lib/nodes/fence.schema';
 import { FenceWrapper } from './lib/nodes/fence-wrapper.component';
 import { VideoPlayer, videoPlayer } from './lib/tags/video-player.component';
-import { TableOfContents } from './lib/tags/table-of-contents.component';
-import { tableOfContents } from './lib/tags/table-of-contents.schema';
 // TODO fix this export
 export { GithubRepository } from './lib/tags/github-repository.component';
 
@@ -94,7 +92,6 @@ export const getMarkdocCustomConfig = (
       tab,
       tabs,
       'terminal-video': terminalVideo,
-      toc: tableOfContents,
       tweet,
       youtube,
       'video-link': videoLink,
@@ -124,7 +121,6 @@ export const getMarkdocCustomConfig = (
     SideBySide,
     Tab,
     Tabs,
-    TableOfContents,
     TerminalVideo,
     Tweet,
     YouTube,
